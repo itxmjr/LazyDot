@@ -1,6 +1,6 @@
 [package]
 name = "lazydot"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A TUI tool to automatically detect, symlink, and manage dotfiles (like GNU Stow with a UI)"
 license = "MIT"
