@@ -1,0 +1,22 @@
+[package]
+name = "lazydot"
+version = "0.1.0"
+edition = "2021"
+description = "A TUI tool to automatically detect, symlink, and manage dotfiles (like GNU Stow with a UI)"
+license = "MIT"
+repository = "https://github.com/itxmjr/LazyDot"
+keywords = ["tui", "dotfiles", "cli", "rust"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+ratatui = "0.28"
+crossterm = "0.28"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3.27.0"
