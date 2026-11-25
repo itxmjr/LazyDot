@@ -1,22 +1,26 @@
 [package]
 name = "lazydot"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
-description = "A TUI tool to automatically detect, symlink, and manage dotfiles (like GNU Stow with a UI)"
+rust-version = "1.88"
+description = "A lazygit-style TUI for your dotfiles: discover, adopt, symlink and restore configs safely. GNU Stow compatible."
 license = "MIT"
 repository = "https://github.com/itxmjr/LazyDot"
-keywords = ["tui", "dotfiles", "cli", "rust"]
-categories = ["command-line-utilities", "development-tools"]
+readme = "README.md"
+keywords = ["tui", "dotfiles", "stow", "symlink", "cli"]
+categories = ["command-line-utilities", "filesystem"]
+exclude = ["/.github", "/assets"]
 
 [dependencies]
-ratatui = "0.28"
-crossterm = "0.28"
-tokio = { version = "1", features = ["full"] }
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-toml = "0.8"
 anyhow = "1"
-clap = { version = "4", features = ["derive"] }
+clap = { version = "4", features = ["derive", "env"] }
+dirs = "6"
+ratatui = "0.30"
 
 [dev-dependencies]
-tempfile = "3.27.0"
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
