@@ -14,7 +14,7 @@ exclude = ["/.github", "/assets"]
 [dependencies]
 anyhow = "1"
 clap = { version = "4", features = ["derive", "env"] }
-dirs = "6"
+dirs = "7"
 ratatui = "0.30"
 
 [dev-dependencies]
