@@ -1,0 +1,46 @@
+name: 🐛 Bug report
+description: Something went wrong
+labels: ["type: bug", "status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **If a bug lost or overwrote files, say so in the title.** Those are fixed first.
+        Check your backups in `~/.local/state/lazydot/backups/` before anything else.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The smallest home/repo layout that shows the problem is ideal.
+      placeholder: |
+        1. ~/.config/foo/ contains ...
+        2. Select `foo` and press `a`
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of `lazydot status`
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: LazyDot version
+      placeholder: "output of `lazydot --version`"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS and terminal
+      placeholder: "Arch Linux, kitty 0.40"
+    validations:
+      required: true

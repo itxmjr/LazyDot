@@ -1,0 +1,33 @@
+name: 📦 App support
+description: LazyDot misses an app's config, or shows something that isn't config
+labels: ["area: discovery", "status: triage"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App name
+      placeholder: "wezterm"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What should change?
+      options:
+        - It should be discovered (config path below)
+        - It should be hidden (it is cache/state, not config)
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Path(s)
+      placeholder: "~/.wezterm.lua or ~/.config/wezterm/"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      multiple: true
+      options: [Linux, macOS]

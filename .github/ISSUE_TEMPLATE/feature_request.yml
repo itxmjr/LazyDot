@@ -1,0 +1,28 @@
+name: ✨ Feature request
+description: Suggest an idea for LazyDot
+labels: ["type: feature", "status: triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the workflow or pain point, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like LazyDot to do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or how other tools do it
+      description: e.g. how lazygit, chezmoi or GNU Stow handle this.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to work on this myself
